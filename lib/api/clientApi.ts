@@ -33,8 +33,7 @@ export const logout = async (): Promise<void> => {
 };
 
 export type EditProfileRequest = {
-  email?: string;
-  username?: string;
+  username: string;
 };
 
 export const editMe = async (data: EditProfileRequest) => {

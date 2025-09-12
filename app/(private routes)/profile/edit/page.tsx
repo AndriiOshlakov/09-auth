@@ -40,7 +40,7 @@ export default function EditProfile() {
             <h1 className={css.formTitle}>Edit Profile</h1>
 
             <Image
-              src="avatar"
+              src={user.avatar}
               alt="User Avatar"
               width={120}
               height={120}
@@ -50,10 +50,15 @@ export default function EditProfile() {
             <form className={css.profileInfo} action={handleSubmit}>
               <div className={css.usernameWrapper}>
                 <label htmlFor="username">Username:</label>
-                <input id="username" type="text" className={css.input} />
+                <input
+                  id="username"
+                  type="text"
+                  className={css.input}
+                  defaultValue={user.username}
+                />
               </div>
 
-              <p>Email: user_email@example.com</p>
+              <p>Email: {user.email}</p>
 
               <div className={css.actions}>
                 <button type="submit" className={css.saveButton}>
