@@ -3,7 +3,7 @@
 import { useParams, useRouter } from "next/navigation";
 import css from "@/app/@modal/(.)notes/[id]/PreviewModal.module.css";
 import { useQuery } from "@tanstack/react-query";
-import { fetchNoteById } from "@/lib/api";
+import { fetchNoteById } from "@/lib/api/clientApi";
 import Modal from "@/components/Modal/Modal";
 
 export default function PreviewModal() {

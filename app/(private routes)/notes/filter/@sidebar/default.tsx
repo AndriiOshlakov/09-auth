@@ -1,8 +1,19 @@
-import css from "@/app/notes/filter/@sidebar/SidebarNotes.module.css";
+import css from "@/app/(private routes)/notes/filter/@sidebar/SidebarNotes.module.css";
 import { NoteTag } from "@/types/note";
 import Link from "next/link";
 
-const tags: NoteTag[] = ["Work", "Personal", "Meeting", "Shopping", "Todo"];
+const tags: NoteTag[] = [
+  "Work",
+  "Personal",
+  "Meeting",
+  "Shopping",
+  "Todo",
+  "Important",
+  "Ideas",
+  "Health",
+  "Travel",
+  "Finance",
+];
 
 const Sidebar = () => {
   return (

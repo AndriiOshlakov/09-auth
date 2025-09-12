@@ -1,10 +1,10 @@
 "use client";
-import css from "@/app/notes/filter/[...slug]/NotesPage.module.css";
+import css from "@/app/(private routes)/notes/filter/[...slug]/NotesPage.module.css";
 import { useState } from "react";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import NoteList from "@/components/NoteList/NoteList";
 import Pagination from "@/components/Pagination/Pagination";
-import { fetchNotes } from "@/lib/api";
+import { fetchNotes } from "@/lib/api/clientApi";
 import SearchBox from "@/components/SearchBox/SearchBox";
 import { useDebouncedCallback } from "use-debounce";
 import { NoteTag } from "@/types/note";
@@ -37,6 +37,7 @@ function NotesClient({ tag }: NotesClientProps) {
     placeholderData: keepPreviousData,
     refetchOnMount: false,
   });
+  console.log(data?.notes);
 
   const totalPages = data?.totalPages ?? 0;
 
@@ -58,7 +59,7 @@ function NotesClient({ tag }: NotesClientProps) {
         </Link>
       </header>
 
-      {data && data.notes.length > 0 && <NoteList items={data.notes} />}
+      {data && data.notes?.length > 0 && <NoteList items={data.notes} />}
     </div>
   );
 }

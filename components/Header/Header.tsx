@@ -1,4 +1,5 @@
-import TagsMenu from "../TagsMenu/TagsMenu";
+import AuthNavigation from "../AuthNavigation/AuthNavigation";
+// import TagsMenu from "../TagsMenu/TagsMenu";
 import css from "./Header.module.css";
 import Link from "next/link";
 
@@ -13,9 +14,10 @@ const Header = () => {
           <li>
             <Link href="/">Home</Link>
           </li>
-          <li>
+          {/* <li>
             <TagsMenu />
-          </li>
+          </li> */}
+          <AuthNavigation />
         </ul>
       </nav>
     </header>

@@ -4,7 +4,18 @@ import { NoteTag } from "@/types/note";
 import Link from "next/link";
 import { useState } from "react";
 
-const tags: NoteTag[] = ["Work", "Personal", "Meeting", "Shopping", "Todo"];
+const tags: NoteTag[] = [
+  "Work",
+  "Personal",
+  "Meeting",
+  "Shopping",
+  "Ideas",
+  "Travel",
+  "Finance",
+  "Health",
+  "Important",
+  "Todo",
+];
 
 const TagsMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
