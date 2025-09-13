@@ -3,7 +3,7 @@
 import Image from "next/image";
 import css from "./EditProfilePage.module.css";
 import { useRouter } from "next/navigation";
-import { useAuthStore } from "@/lib/store/aythStore";
+import { useAuthStore } from "@/lib/store/authStore";
 import { useState } from "react";
 import { isAxiosError } from "axios";
 import { editMe, EditProfileRequest } from "@/lib/api/clientApi";

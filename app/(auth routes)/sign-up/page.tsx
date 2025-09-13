@@ -6,7 +6,7 @@ import { useState } from "react";
 import { RegisterRequest } from "@/types/auth";
 import { register } from "@/lib/api/clientApi";
 import { AxiosError } from "axios";
-import { useAuthStore } from "@/lib/store/aythStore";
+import { useAuthStore } from "@/lib/store/authStore";
 
 type ApiError = AxiosError<{ error: string }>;
 
