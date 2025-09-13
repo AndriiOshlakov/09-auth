@@ -49,7 +49,7 @@ export default function EditProfile() {
 
             <form className={css.profileInfo} action={handleSubmit}>
               <div className={css.usernameWrapper}>
-                <label htmlFor="username">Username:</label>
+                <label htmlFor="username">Username:{user.username}</label>
                 <input
                   id="username"
                   type="text"

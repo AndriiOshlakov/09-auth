@@ -24,7 +24,7 @@ export const fetchNotesServer = async ({
   return response.data;
 };
 
-export const getMeServer = async () => {
+export const getMeServer = async (): Promise<User> => {
   const cookieStore = await cookies();
   const { data } = await nextServer.get<User>("/users/me", {
     headers: {

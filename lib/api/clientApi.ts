@@ -1,5 +1,3 @@
-"use client";
-
 import { LoginRequest, RegisterRequest } from "@/types/auth";
 import { FetchNotesParams, nextServer, PostsHttpResponse } from "./api";
 import { User } from "@/types/user";
@@ -23,7 +21,7 @@ export const checkSession = async () => {
   return res.data.success;
 };
 
-export const getMe = async () => {
+export const getMe = async (): Promise<User> => {
   const { data } = await nextServer.get<User>("/users/me");
   return data;
 };
@@ -33,7 +31,7 @@ export const logout = async (): Promise<void> => {
 };
 
 export type EditProfileRequest = {
-  username: string;
+  username?: string;
 };
 
 export const editMe = async (data: EditProfileRequest) => {
